@@ -7,7 +7,7 @@
 
 -点击 comfyui manager
 
--通过GIT URL 安装 [https://github.com/TTPlanetPig/Comfyui_JC2](https://github.com/jinwei1660/Comfyui_AJPrompt.git) or 或者进入目录 ./comfyui/custom_nodes run 
+-通过GIT URL 安装 [https://github.com/jinwei1660/Comfyui_AJPrompt.git](https://github.com/jinwei1660/Comfyui_AJPrompt.git) or 或者进入目录 ./comfyui/custom_nodes run 
 ```shell
 git clone https://github.com/jinwei1660/Comfyui_AJPrompt.git
 ```
