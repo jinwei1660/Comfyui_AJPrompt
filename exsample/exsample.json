@@ -1,0 +1,314 @@
+{
+  "last_node_id": 5,
+  "last_link_id": 5,
+  "nodes": [
+    {
+      "id": 2,
+      "type": "AJPromptGeneratorNode",
+      "pos": {
+        "0": 5366.73583984375,
+        "1": 145.68443298339844
+      },
+      "size": {
+        "0": 416.39251708984375,
+        "1": 552.7962036132812
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "PROMPT",
+          "type": "STRING",
+          "links": [
+            1
+          ],
+          "slot_index": 0,
+          "label": "PROMPT"
+        },
+        {
+          "name": "KEYWORD",
+          "type": "STRING",
+          "links": [
+            4
+          ],
+          "slot_index": 1,
+          "label": "KEYWORD"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AJPromptGeneratorNode"
+      },
+      "widgets_values": [
+        "随机 (Random)",
+        "随机 (Random)",
+        "聚光灯 (Spotlighting)",
+        "随机 (Random)",
+        "随机 (Random)",
+        "随机 (Random)",
+        "随机 (Random)",
+        "随机 (Random)",
+        "连帽卫衣 (Hooded sweatshirt)",
+        "随机 (Random)",
+        "随机 (Random)",
+        "双肩包 (Backpack)",
+        "style-wenyi,mxks24119, this is a photo from a fashion magazine,  a beautiful model wearing a Cotton fabric Zip-up Hoodie.Same colored hat rope, black rope head",
+        true
+      ]
+    },
+    {
+      "id": 4,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": 5846,
+        "1": -70
+      },
+      "size": [
+        383.0171203613281,
+        175.47703552246094
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 4,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            5
+          ],
+          "slot_index": 0,
+          "shape": 6,
+          "label": "字符串"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "Leica Q2,Medium Telephoto Lens,Spotlighting,Point-of-View,PhotoStuido,Sitting,Sideways,Relaxed,Hooded sweatshirt,Mini skirt,Ballet flats,Backpack"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "AJPromptCHATGPT",
+      "pos": {
+        "0": 5821,
+        "1": 250
+      },
+      "size": {
+        "0": 557.6747436523438,
+        "1": 435.8894958496094
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt_keyword",
+          "type": "STRING",
+          "link": 5,
+          "widget": {
+            "name": "prompt_keyword"
+          },
+          "label": "prompt_keyword"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "PROMPT",
+          "type": "STRING",
+          "links": [
+            2
+          ],
+          "slot_index": 0,
+          "label": "PROMPT"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AJPromptCHATGPT"
+      },
+      "widgets_values": [
+        "This is a photo from a fashion magazine of a beautiful model. Based on the keywords I provided, such as background, model's clothing, etc Provide detailed scene arrangements for this shoot based on the background and costumes, such as pianos, tables, chairs, etc. Be careful not to use pianos, tables, chairs, etc. in a fixed manner. The shooting scene should be arranged according to actual needs, and the use of these props can enhance the overall layering of the image. Based on the overall setting of the scene, it is necessary to highlight the model and provide detailed descriptions of special lighting and shadows for the model as a whole,Please note that the output should be concise and effective, and avoid using meaningless adjectives",
+        "",
+        "You are a professional photographer, and taking a professional model photo, using the descriptive keywords I gave you, help me refine it into a professional shooting content",
+        "123456",
+        1024,
+        0.7,
+        "gpt-4o",
+        "https://api.open-proxy.cn/v1/chat/completions",
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "id": 1,
+      "type": "easy promptConcat",
+      "pos": {
+        "0": 6498,
+        "1": 194
+      },
+      "size": [
+        315,
+        106
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt1",
+          "type": "STRING",
+          "link": 1,
+          "widget": {
+            "name": "prompt1"
+          },
+          "label": "提示词1",
+          "shape": 7
+        },
+        {
+          "name": "prompt2",
+          "type": "STRING",
+          "link": 2,
+          "widget": {
+            "name": "prompt2"
+          },
+          "label": "提示词2",
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "links": [
+            3
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "提示词"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "easy promptConcat"
+      },
+      "widgets_values": [
+        "",
+        "",
+        ","
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 3,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": 6838,
+        "1": -7
+      },
+      "size": [
+        569.3392333984375,
+        794.6670532226562
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 3,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6,
+          "label": "字符串"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "style-wenyi,mxks24119, this is a photo from a fashion magazine,  a beautiful model wearing a Cotton fabric Zip-up Hoodie.Same colored hat rope, black rope head,To create a professional fashion magazine photo based on your keywords, here's a detailed scene arrangement:\n\n**Setting & Background:**\n\n- **Location**: A modern, minimalist photo studio with neutral tones (grays, whites) to focus attention on the model.\n- **Backdrop**: A textured gray backdrop to add subtle depth without overwhelming the subject.\n- **Props**: \n  - A low, contemporary bench with clean lines positioned slightly off-center to provide the model with a natural sitting spot.\n  - A few scattered, minimalist sculptures or geometric shapes to add a modern artistic touch.\n\n**Model's Appearance:**\n\n- **Clothing**: The model wears a hooded sweatshirt in a soft, muted color (e.g., pastel beige) paired with a contrasting mini skirt in a bold hue (e.g., deep burgundy) to create an interesting visual contrast.\n- **Footwear**: Ballet flats in a matching tone to the sweatshirt for a cohesive look.\n- **Accessory**: A stylish, compact backpack placed casually beside the bench, or slung over one shoulder, to enhance the relaxed vibe.\n\n**Lighting & Shadows:**\n\n- **Primary Lighting**: Use a spotlighting technique to create a focused beam of light on the model, highlighting her face and clothing, thus drawing attention to her relaxed posture and expression.\n- **Additional Lighting**: Employ soft fill lights to gently illuminate the backdrop and props, ensuring they are visible without detracting from the model.\n- **Shadow Play**: Position the lights to cast subtle, elongated shadows on the backdrop, adding depth and drama to the composition.\n\n**Shooting Technique:**\n\n- **Lens Choice**: Use a Leica Q2 with a medium telephoto lens to capture the scene with a natural perspective, ensuring the model remains the focal point.\n- **Point-of-View**: Frame the shot from a slightly elevated angle, showcasing the model's relaxed, sideways pose while sitting on the bench.\n- **Composition**: Maintain a balanced composition with the model positioned off-center, allowing negative space to enhance the overall aesthetic and draw the viewer's eye across the scene.\n\nThis setup ensures the model is highlighted effectively, with the clothing and props complementing rather than overshadowing her presence."
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      0,
+      1,
+      0,
+      "STRING"
+    ],
+    [
+      2,
+      5,
+      0,
+      1,
+      1,
+      "STRING"
+    ],
+    [
+      3,
+      1,
+      0,
+      3,
+      0,
+      "STRING"
+    ],
+    [
+      4,
+      2,
+      1,
+      4,
+      0,
+      "STRING"
+    ],
+    [
+      5,
+      4,
+      0,
+      5,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6588450000000132,
+      "offset": [
+        -4665.0689594872965,
+        467.7540771507819
+      ]
+    }
+  },
+  "version": 0.4
+}
